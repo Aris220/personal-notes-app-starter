@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import App from "./App";
 import Hallo from "./pages/hallo";
 import Notes from "./pages/notes";
+import Navbar from "./component/Layouts/navbar";
 
 //file styles
 // import "./styles/style.css";
@@ -13,6 +14,7 @@ import Notes from "./pages/notes";
 const root = createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
+    {/* <Navbar /> */}
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/hallo" element={<Hallo />} />

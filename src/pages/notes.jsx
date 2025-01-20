@@ -1,22 +1,29 @@
-import { useState, useEffect, Fragment } from "react";
+import { useState, useEffect, Fragment, useRef } from "react";
 import { getAllNotes } from "../utils/local-data";
 import { showFormattedDate } from "../utils";
 
 import styles from "../styles/style.module.css";
 import NotFound from "./notFound";
+import Navbar from "../component/Layouts/navbar";
 
 const Notes = () => {
   const [notes, setNotes] = useState([]);
+  const loaded = useRef(false);
 
   useEffect(() => {
-    const data = getAllNotes(); // Fetch the data synchronously
-    setNotes(data); // Update state
-    console.log(data);
+    if (loaded.current === false) {
+      const data = getAllNotes();
+      setNotes(data);
+      loaded.current = true;
+      console.log(data);
+      console.log(loaded);
+    }
   }, []);
+
   return (
     <Fragment>
       <div className={styles["app-container"]}>
-        <header>hi</header>
+        <Navbar />
         <main>
           <section className={styles["homepage"]}>
             {notes.length === 0 ? (
