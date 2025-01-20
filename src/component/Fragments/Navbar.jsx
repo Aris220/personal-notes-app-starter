@@ -10,7 +10,7 @@ const Navbar = () => {
         <h1>Notes Aplication</h1>
         <button className={styles["button-nav"]}>
           {/* <Link to="">a</Link> */}
-          <a href="http://">arsip</a>
+          <Link to="/arsip">Archive</Link>
         </button>
       </header>
     </>

@@ -183,7 +183,7 @@ main {
   border-radius: 50px;
   background-color: var(--on-background);
   color: var(--background);
-  padding: 8px;
+  padding: 30px;
   cursor: pointer;
 }
 

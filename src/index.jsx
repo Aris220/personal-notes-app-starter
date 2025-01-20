@@ -4,9 +4,10 @@ import { BrowserRouter, Routes, Route } from "react-router";
 
 // file Pages
 import App from "./App";
-import Hallo from "./pages/hallo";
-import Notes from "./pages/notes";
-import Navbar from "./component/Layouts/navbar";
+// import Hallo from "./pages/hallo";
+import Notes from "./pages/Notes";
+import Navbar from "./component/Fragments/Navbar";
+import NoteDetail from "./pages/NoteDetail";
 
 //file styles
 // import "./styles/style.css";
@@ -17,8 +18,9 @@ root.render(
     {/* <Navbar /> */}
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="/hallo" element={<Hallo />} />
+      {/* <Route path="/hallo" element={<Hallo />} /> */}
       <Route path="/notes" element={<Notes />} />
+      <Route path="/notes/:id" element={<NoteDetail />} />
     </Routes>
   </BrowserRouter>
 );
