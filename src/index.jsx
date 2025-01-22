@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 
 // file Pages
 import App from "./App";
-// import Hallo from "./pages/hallo";
+
 import Notes from "./pages/Notes";
 import Navbar from "./component/Fragments/Navbar";
 import NoteDetail from "./pages/NoteDetail";

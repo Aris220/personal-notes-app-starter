@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 
 import styles from "../styles/style.module.css";
 import { getNote } from "../utils/local-data";
+
 import ButtonArchive from "../component/Elements/button/buttonArchive";
 import ButtonDelete from "../component/Elements/button/buttonDelete";
 
