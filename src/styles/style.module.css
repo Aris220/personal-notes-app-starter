@@ -52,9 +52,7 @@ body {
   flex: 1;
 }
 
-/* header .navigation ul li {
- */
-.navigation ul li {
+header .navigation ul li {
   display: inline-block;
   font-size: 40px;
   margin: 0 8px;
@@ -64,30 +62,30 @@ body {
   padding: 40px;
   width: 100px;
 }
-.button-nav {
+/* =========================== */
+.flex-nav {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 50px;
-  padding: 20px;
-  margin: auto;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-  font-size: 20px;
+  justify-content: center;
+  background-color: transparent;
+  padding: 10px 0;
+}
+
+.flex-nav a {
+  color: white;
   text-decoration: none;
-  background-color: #bcbabe;
+  margin: 0px 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.button-nav:hover {
-  background-color: #121212;
+
+.flex-nav a:hover {
+  background-color: #0056b3;
+  transform: scale(1.2); /* Enlarges the element */
 }
-.button-nav a {
-  text-decoration: none;
-}
+
+/* ======================= */
 
 main {
   margin: 0 auto;
@@ -231,6 +229,10 @@ main {
   padding: 8px;
   width: 100%;
   color: var(--on-background);
+  -webkit-border-radius: ;
+  -moz-border-radius: ;
+  -ms-border-radius: ;
+  -o-border-radius: ;
 }
 
 .search-bar input::placeholder {

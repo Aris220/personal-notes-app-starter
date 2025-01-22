@@ -8,10 +8,17 @@ const Navbar = () => {
     <>
       <header className={styles["header"]}>
         <h1>Notes Aplication</h1>
-        <button className={styles["button-nav"]}>
-          {/* <Link to="">a</Link> */}
+        <nav className={styles["flex-nav"]}>
+          {/* <ul className={styles["navigation"]}>
+            <li> */}
+          {/* <button className={styles["button-nav"]}>
+              
+              <Link to="/arsip">Archive</Link>
+            </button> */}
           <Link to="/arsip">Archive</Link>
-        </button>
+          {/* </li>
+          </ul> */}
+        </nav>
       </header>
     </>
   );

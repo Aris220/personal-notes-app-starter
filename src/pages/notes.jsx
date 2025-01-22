@@ -8,6 +8,8 @@ import styles from "../styles/style.module.css";
 import NotFound from "./NotFound";
 import Navbar from "../component/Fragments/Navbar";
 import CardNote from "../component/Fragments/CardNote";
+import SearchNote from "../component/Fragments/SearchNote";
+import ButtonAdd from "../component/Elements/button/ButtonAdd";
 
 const Notes = () => {
   const [notes, setNotes] = useState([]);
@@ -31,34 +33,39 @@ const Notes = () => {
         <Navbar />
         <main>
           <section className={styles["homepage"]}>
+            <SearchNote>Active Note</SearchNote>
             {notes.length === 0 ? (
               <NotFound />
             ) : (
               <section className={styles["notes-list"]}>
                 {notes.map((note) => (
-                  //     <article className={styles["note-item"]} key={note.id}>
-                  //       <h3 className={styles["note-item__title"]} id={note.id}>
-                  //         <Link to={`/notes/${note.id}`}>{note.title}</Link>
-                  //       </h3>
-                  //       <p className={styles["note-item__createdAt"]}>
-                  //         {showFormattedDate(note.createdAt)}
-                  //       </p>
-                  //       <p className={styles["note-item__body"]}>{note.body}</p>
-                  //     </article>
                   <CardNote
                     key={note.id}
                     id={note.id}
                     title={note.title}
-                    createdAt={note.createdAt}
+                    createdAt={showFormattedDate(note.createdAt)}
                     body={note.body}
                   />
                 ))}
               </section>
             )}
+            <div>
+              <section className={styles["homepage__action"]}>
+                <ButtonAdd />
+              </section>
+            </div>
           </section>
         </main>
       </div>
     </Fragment>
   );
+};
+
+//Validation
+CardNote.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  title: PropTypes.string.isRequired,
+  createdAt: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
 };
 export default Notes;
