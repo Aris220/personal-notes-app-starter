@@ -229,10 +229,6 @@ main {
   padding: 8px;
   width: 100%;
   color: var(--on-background);
-  -webkit-border-radius: ;
-  -moz-border-radius: ;
-  -ms-border-radius: ;
-  -o-border-radius: ;
 }
 
 .search-bar input::placeholder {

@@ -9,6 +9,8 @@ import Notes from "./pages/notes";
 import Navbar from "./component/Fragments/Navbar";
 import NoteDetail from "./pages/NoteDetail";
 import ErrorPage, { NotFoundPage } from "./pages/404";
+import MainLayout from "./component/Layouts/MainLayout";
+import AddNote from "./pages/AddNote";
 
 //file styles
 // import "./styles/style.css";
@@ -16,13 +18,40 @@ import ErrorPage, { NotFoundPage } from "./pages/404";
 const root = createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    {/* <Navbar /> */}
     <Routes>
       <Route path="/" element={<App />} />
-      {/* <Route path="/hallo" element={<Hallo />} /> */}
-      <Route path="/notes" element={<Notes />} />
-      <Route path="/notes/:id" element={<NoteDetail />} />
-      <Route path="/*" element={<NotFoundPage />} />
+      <Route
+        path="/notes"
+        element={
+          <MainLayout>
+            <Notes />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/notes/:id"
+        element={
+          <MainLayout>
+            <NoteDetail />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/notes/new"
+        element={
+          <MainLayout>
+            <AddNote />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/*"
+        element={
+          <MainLayout>
+            <NotFoundPage />
+          </MainLayout>
+        }
+      />
     </Routes>
   </BrowserRouter>
 );
