@@ -5,9 +5,10 @@ import { BrowserRouter, Routes, Route } from "react-router";
 // file Pages
 import App from "./App";
 
-import Notes from "./pages/Notes";
+import Notes from "./pages/notes";
 import Navbar from "./component/Fragments/Navbar";
 import NoteDetail from "./pages/NoteDetail";
+import ErrorPage, { NotFoundPage } from "./pages/404";
 
 //file styles
 // import "./styles/style.css";
@@ -21,6 +22,7 @@ root.render(
       {/* <Route path="/hallo" element={<Hallo />} /> */}
       <Route path="/notes" element={<Notes />} />
       <Route path="/notes/:id" element={<NoteDetail />} />
+      <Route path="/*" element={<NotFoundPage />} />
     </Routes>
   </BrowserRouter>
 );
