@@ -7,7 +7,12 @@ const Navbar = () => {
   return (
     <>
       <header className={styles["header"]}>
-        <h1>Notes Aplication</h1>
+        <h1>
+          <Link to="/notes" className={styles["link-style"]}>
+            Notes Aplication
+          </Link>
+        </h1>
+
         <nav className={styles["flex-nav"]}>
           {/* <ul className={styles["navigation"]}>
             <li> */}
@@ -15,7 +20,7 @@ const Navbar = () => {
               
               <Link to="/arsip">Archive</Link>
             </button> */}
-          <Link to="/arsip">Archive</Link>
+          <Link to="/archive">Archive</Link>
           {/* </li>
           </ul> */}
         </nav>

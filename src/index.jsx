@@ -4,13 +4,12 @@ import { BrowserRouter, Routes, Route } from "react-router";
 
 // file Pages
 import App from "./App";
-
 import Notes from "./pages/notes";
-import Navbar from "./component/Fragments/Navbar";
 import NoteDetail from "./pages/NoteDetail";
-import ErrorPage, { NotFoundPage } from "./pages/404";
+import NotFoundPage from "./pages/404";
 import MainLayout from "./component/Layouts/MainLayout";
 import AddNote from "./pages/AddNote";
+import Archive from "./pages/Archive";
 
 //file styles
 // import "./styles/style.css";
@@ -41,6 +40,14 @@ root.render(
         element={
           <MainLayout>
             <AddNote />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/archive"
+        element={
+          <MainLayout>
+            <Archive />
           </MainLayout>
         }
       />
