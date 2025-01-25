@@ -14,6 +14,7 @@ const Navbar = () => {
         </h1>
 
         <nav className={styles["flex-nav"]}>
+          <Link to="/">Notes</Link>
           <Link to="/archive">Archive</Link>
         </nav>
       </header>
