@@ -11,9 +11,6 @@ import MainLayout from "./component/Layouts/MainLayout";
 import AddNote from "./pages/AddNote";
 import Archive from "./pages/Archive";
 
-//file styles
-// import "./styles/style.css";
-
 const root = createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
