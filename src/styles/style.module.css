@@ -70,22 +70,24 @@ header .navigation ul li {
   display: flex;
   justify-content: center;
   background-color: transparent;
-  padding: 10px 0;
+  padding: 0px;
 }
 
 .flex-nav a {
+  font-size: 20px;
   color: white;
   text-decoration: none;
   margin: 0px 15px;
   padding: 10px 15px;
   border-radius: 5px;
   background-color: transparent;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  /* transition: transform 0.3s ease, background-color 0.3s ease; */
 }
 
 .flex-nav a:hover {
-  background-color: #0056b3;
-  transform: scale(1.2); /* Enlarges the element */
+  background-color: white;
+  color: black;
+  /* transform: scale(1.2);  */
 }
 
 /* ======================= */

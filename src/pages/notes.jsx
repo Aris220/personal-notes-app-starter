@@ -63,6 +63,7 @@ const Notes = () => {
               createdAt={showFormattedDate(note.createdAt)}
               body={note.body}
               archived={note.archived}
+              type="notes"
             />
           ))}
         </section>
@@ -75,13 +76,18 @@ const Notes = () => {
     </section>
   );
 };
-
-//Validation
-CardNote.propTypes = {
-  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  title: PropTypes.string.isRequired,
-  createdAt: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
-  archived: PropTypes.bool.isRequired,
+// PropTypes Validation for Notes Component (Child components)
+Notes.propTypes = {
+  notes: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+      title: PropTypes.string.isRequired,
+      createdAt: PropTypes.string.isRequired,
+      body: PropTypes.string.isRequired,
+      archived: PropTypes.bool.isRequired,
+    })
+  ),
+  handleAddNote: PropTypes.func,
 };
+
 export default Notes;

@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from "react-router";
+import PropTypes from "prop-types";
 
 //File css
 import styles from "../../styles/style.module.css";
@@ -28,6 +29,11 @@ const SearchNote = (props) => {
       </section>
     </>
   );
+};
+
+// PropTypes validation
+SearchNote.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default SearchNote;

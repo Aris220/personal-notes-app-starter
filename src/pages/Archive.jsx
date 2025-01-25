@@ -21,16 +21,9 @@ const Archive = () => {
 
   useEffect(() => {
     if (!loaded.current) {
-      // const data = getAllNotes();
-      // setNotes(data);
-      // loaded.current = true;
-      // console.log(data);
-      // console.log(loaded);
       const data = getArchivedNotes();
       setNotes(data);
       loaded.current = true;
-      console.log(data);
-      console.log(loaded);
     }
   }, []);
 
@@ -63,15 +56,11 @@ const Archive = () => {
                 createdAt={showFormattedDate(note.createdAt)}
                 body={note.body}
                 archived={note.archived}
+                type="archive"
               />
             ))}
           </section>
         )}
-        <div>
-          <section className={styles["homepage__action"]}>
-            <ButtonAdd />
-          </section>
-        </div>
       </section>
       {/* </main>
       </div> */}

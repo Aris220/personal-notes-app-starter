@@ -1,5 +1,7 @@
 import { Link } from "react-router";
 import PropTypes from "prop-types";
+
+//File css
 import styles from "../../styles/style.module.css";
 
 const CardNote = (props) => {
@@ -17,7 +19,7 @@ const CardNote = (props) => {
   );
 };
 
-//Validation with
+// PropTypes validation
 CardNote.propTypes = {
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   title: PropTypes.string.isRequired,

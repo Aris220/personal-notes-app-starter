@@ -18,47 +18,13 @@ const root = createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />} />
-      <Route
-        path="/notes"
-        element={
-          <MainLayout>
-            <Notes />
-          </MainLayout>
-        }
-      />
-      <Route
-        path="/notes/:id"
-        element={
-          <MainLayout>
-            <NoteDetail />
-          </MainLayout>
-        }
-      />
-      <Route
-        path="/notes/new"
-        element={
-          <MainLayout>
-            <AddNote />
-          </MainLayout>
-        }
-      />
-      <Route
-        path="/archive"
-        element={
-          <MainLayout>
-            <Archive />
-          </MainLayout>
-        }
-      />
-      <Route
-        path="/*"
-        element={
-          <MainLayout>
-            <NotFoundPage />
-          </MainLayout>
-        }
-      />
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<Notes />} />
+        <Route path="/notes/:id" element={<NoteDetail />} />
+        <Route path="/notes/new" element={<AddNote />} />
+        <Route path="/archive" element={<Archive />} />
+        <Route path="/*" element={<NotFoundPage />} />
+      </Route>
     </Routes>
   </BrowserRouter>
 );
